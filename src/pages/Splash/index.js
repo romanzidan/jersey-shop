@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {Logo} from '../../assets';
+import {fonts} from '../../utils';
 
 export default function Splash({navigation}) {
   // useEffect(() => {
@@ -12,7 +13,10 @@ export default function Splash({navigation}) {
   return (
     <View style={styles.page}>
       <Logo />
-      <Text style={styles.title}>JerseyShop</Text>
+      <View style={styles.text}>
+        <Text style={styles.title}>Jersey</Text>
+        <Text style={styles.subTitle}>Shop</Text>
+      </View>
     </View>
   );
 }
@@ -24,9 +28,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  text: {
+    flexDirection: 'row',
+  },
   title: {
     fontSize: 30,
+    fontFamily: fonts.primary[600],
     color: '#B2FEFA',
     marginTop: 15,
+  },
+  subTitle: {
+    fontSize: 30,
+    fontFamily: fonts.primary[400],
+    color: '#B2FEFA',
+    marginTop: 17,
   },
 });
