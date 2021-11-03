@@ -1,14 +1,14 @@
 import React, {useEffect} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {Logo} from '../../assets';
-import {fonts} from '../../utils';
+import {colors, fonts} from '../../utils';
 
 export default function Splash({navigation}) {
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     navigation.replace('Home');
-  //   }, 3000);
-  // }, [navigation]);
+  useEffect(() => {
+    setTimeout(() => {
+      navigation.replace('Home');
+    }, 3000);
+  }, [navigation]);
 
   return (
     <View style={styles.page}>
@@ -34,13 +34,13 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 30,
     fontFamily: fonts.primary[600],
-    color: '#B2FEFA',
+    color: colors.text.cyan,
     marginTop: 15,
   },
   subTitle: {
     fontSize: 30,
     fontFamily: fonts.primary[400],
-    color: '#B2FEFA',
+    color: colors.text.cyan,
     marginTop: 17,
   },
 });
